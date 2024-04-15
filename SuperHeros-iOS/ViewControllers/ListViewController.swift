@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ListViewController:   UIViewController,
+                            UICollectionViewDataSource,
+                            UICollectionViewDelegate,
+                            UICollectionViewDelegateFlowLayout,
+                            UISearchBarDelegate/*,
+                            UISearchControllerDelegate*/ {
     
     // MARK: Properties
     
@@ -32,6 +37,33 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self?.collectionView.reloadData()
             }
         })
+        
+        let search = UISearchController(searchResultsController: nil)
+        //search.delegate = self
+        search.searchBar.delegate = self
+        self.navigationItem.searchController = search
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        SuperheroProvider.searchByName(query: searchBar.text!, completionHandler: { [weak self] results in
+            self?.superheroList = results
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        })
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        SuperheroProvider.searchByName(query: "a", completionHandler: { [weak self] results in
+            self?.superheroList = results
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        })
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
     
     // MARK: CollectionView DataSource & Delegate
