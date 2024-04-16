@@ -10,7 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="SuperHeros_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="cardView" destination="gRH-JW-SNz" id="6gX-f2-dSk"/>
+                <outlet property="combatProgressView" destination="MpX-sx-9dK" id="Qam-Bh-fKO"/>
+                <outlet property="durabilityProgressView" destination="DLA-Vw-0Ap" id="xto-cv-svf"/>
                 <outlet property="imageView" destination="5Ae-Zv-rue" id="lHz-Kd-miw"/>
+                <outlet property="intelligenceProgressView" destination="KAj-wp-cW5" id="npg-4V-bqt"/>
+                <outlet property="nameLabel" destination="wxq-yU-gca" id="EcT-IT-Q6T"/>
+                <outlet property="numberLabel" destination="bBd-o3-yki" id="CA1-43-hu8"/>
+                <outlet property="powerProgressView" destination="CNx-1n-25V" id="Uzp-JC-UuZ"/>
+                <outlet property="publisherLabel" destination="Uld-so-rY0" id="Gph-mh-hzR"/>
+                <outlet property="speedProgressView" destination="y9B-wS-mlc" id="xKy-nn-p7i"/>
+                <outlet property="statsView" destination="2MF-NE-cYI" id="DWi-kd-h8L"/>
+                <outlet property="strengthProgressView" destination="ub9-A2-a2x" id="13P-WR-F0l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,54 +30,210 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ae-Zv-rue">
-                    <rect key="frame" x="16" y="59" width="361" height="243"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="5Ae-Zv-rue" secondAttribute="height" multiplier="361:243" id="A1u-n8-tWt"/>
-                    </constraints>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-hv-Ehx">
-                    <rect key="frame" x="16" y="310" width="361" height="223"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRH-JW-SNz">
+                    <rect key="frame" x="16" y="59" width="361" height="743"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-qP-b4b">
-                            <rect key="frame" x="8" y="8" width="115" height="29"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5Ae-Zv-rue">
+                            <rect key="frame" x="8" y="72" width="345" height="471"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-NE-cYI" userLabel="Stats View">
+                            <rect key="frame" x="8" y="551" width="345" height="160"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-CP-uzf">
+                                    <rect key="frame" x="8" y="8" width="329" height="144"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-Vu-5Jd">
+                                            <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="144"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rq-pn-Uhf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KZh-PM-aQ8">
+                                                            <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="48" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.0" green="0.73725497719999999" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-wp-cW5">
+                                                            <rect key="frame" x="56" y="23" width="100" height="4"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.0" green="0.73725497719999999" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="9l7-Wb-spV"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-lb-j2a">
+                                                    <rect key="frame" x="0.0" y="48" width="160.66666666666666" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shield.checkered" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n29-iw-giU">
+                                                            <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="48" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="1" green="0.59607845540000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-Vw-0Ap">
+                                                            <rect key="frame" x="56" y="23" width="100" height="4"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="1" green="0.59607845540000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="25F-HF-vZx"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCy-8T-oqL">
+                                                    <rect key="frame" x="0.0" y="96" width="160.66666666666666" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uWW-Qz-VGo">
+                                                            <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="48" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.79607844350000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CNx-1n-25V">
+                                                            <rect key="frame" x="56" y="23" width="100" height="4"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.79607844350000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="aEe-oI-7bv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="poC-Kj-mdR">
+                                            <rect key="frame" x="168.66666666666663" y="0.0" width="160.33333333333337" height="144"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dy9-Dv-I9U">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="figure.strengthtraining.traditional" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZIx-jI-RVx">
+                                                            <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="48" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.29803922770000002" green="0.68627452850000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-A2-a2x">
+                                                            <rect key="frame" x="56" y="23" width="100" height="4"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.29803922770000002" green="0.68627452850000004" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="C4l-Eu-d14"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY9-63-VTt">
+                                                    <rect key="frame" x="0.0" y="48" width="160.33333333333334" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="figure.strengthtraining.functional" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bBT-aU-PVV">
+                                                            <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="48" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.2470588088" green="0.31764706970000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y9B-wS-mlc">
+                                                            <rect key="frame" x="56" y="23" width="100" height="4"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="0.2470588088" green="0.31764706970000001" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="KC6-GF-Wu6"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZK2-fU-22k">
+                                                    <rect key="frame" x="0.0" y="96" width="160.33333333333334" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="figure.kickboxing" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="suO-mb-xJx">
+                                                            <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="48" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-sx-9dK">
+                                                            <rect key="frame" x="56" y="23" width="100" height="4"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="XUN-sE-Hqo"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25362168870000001" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="l1n-CP-uzf" firstAttribute="leading" secondItem="2MF-NE-cYI" secondAttribute="leading" constant="8" id="COX-pD-dKs"/>
+                                <constraint firstAttribute="trailing" secondItem="l1n-CP-uzf" secondAttribute="trailing" constant="8" id="LPX-TE-VLf"/>
+                                <constraint firstItem="l1n-CP-uzf" firstAttribute="top" secondItem="2MF-NE-cYI" secondAttribute="top" constant="8" id="op2-yC-x2t"/>
+                                <constraint firstAttribute="bottom" secondItem="l1n-CP-uzf" secondAttribute="bottom" constant="8" id="rBj-e1-1Kw"/>
+                                <constraint firstAttribute="height" constant="160" id="yuv-b3-lIP"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wxq-yU-gca">
+                            <rect key="frame" x="8" y="16" width="345" height="48"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.25362168870000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="PlanetKosmos" family="Planet Kosmos" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYF-cK-mOM">
-                            <rect key="frame" x="8" y="45" width="84" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-  Label  -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-so-rY0">
+                            <rect key="frame" x="8" y="717" width="345" height="18"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX0-dh-o3c">
-                            <rect key="frame" x="100" y="45" width="14" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nº: 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-o3-yki">
+                            <rect key="frame" x="8" y="0.0" width="340" height="16"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="10"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="2MF-NE-cYI" secondAttribute="bottom" constant="32" id="2af-Ee-dOV"/>
+                        <constraint firstAttribute="trailing" secondItem="2MF-NE-cYI" secondAttribute="trailing" constant="8" id="8MS-SH-BVe"/>
+                        <constraint firstItem="2MF-NE-cYI" firstAttribute="leading" secondItem="gRH-JW-SNz" secondAttribute="leading" constant="8" id="Wgq-R5-FOW"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="5Ae-Zv-rue" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="L2W-eN-Qqf"/>
-                <constraint firstItem="5Ae-Zv-rue" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OYj-cu-3iu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Ae-Zv-rue" secondAttribute="trailing" constant="16" id="UfX-is-M4U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gRH-JW-SNz" secondAttribute="trailing" constant="16" id="CaB-9i-vhk"/>
+                <constraint firstItem="gRH-JW-SNz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-16" id="lm1-QB-oUA"/>
+                <constraint firstItem="gRH-JW-SNz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rs9-H2-ubo"/>
+                <constraint firstItem="gRH-JW-SNz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="txI-7a-tOe"/>
             </constraints>
             <point key="canvasLocation" x="138.1679389312977" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="brain.fill" catalog="system" width="128" height="107"/>
+        <image name="figure.kickboxing" catalog="system" width="118" height="128"/>
+        <image name="figure.strengthtraining.functional" catalog="system" width="117" height="128"/>
+        <image name="figure.strengthtraining.traditional" catalog="system" width="128" height="119"/>
+        <image name="flame.fill" catalog="system" width="106" height="128"/>
+        <image name="shield.checkered" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

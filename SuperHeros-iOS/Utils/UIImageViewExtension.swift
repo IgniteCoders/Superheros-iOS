@@ -23,4 +23,17 @@ extension UIImageView {
     func loadFrom(url: String) {
         self.loadFrom(url: URL(string: url)!)
     }
+    
+    func loadFrom(url: String, completionHandler: @escaping (UIImage) -> Void) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: URL(string: url)!) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                        completionHandler(image)
+                    }
+                }
+            }
+        }
+    }
 }

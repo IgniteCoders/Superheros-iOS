@@ -17,6 +17,7 @@ class ListViewController:   UIViewController,
     // MARK: Properties
     
     var superheroList: [Superhero] = []
+    var superheroInitialList: [Superhero] = []
     
     // MARK: IBOutlets
     
@@ -32,6 +33,7 @@ class ListViewController:   UIViewController,
         collectionView.register(SuperheroViewCell.getNib(), forCellWithReuseIdentifier: "cell")
         
         SuperheroProvider.searchByName(query: "a", completionHandler: { [weak self] results in
+            self?.superheroInitialList = results
             self?.superheroList = results
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
@@ -54,16 +56,15 @@ class ListViewController:   UIViewController,
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        SuperheroProvider.searchByName(query: "a", completionHandler: { [weak self] results in
-            self?.superheroList = results
-            DispatchQueue.main.async {
-                self?.collectionView.reloadData()
-            }
-        })
+        self.superheroList = self.superheroInitialList
+        self.collectionView.reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        if (searchText.isEmpty) {
+            self.superheroList = self.superheroInitialList
+            self.collectionView.reloadData()
+        }
     }
     
     // MARK: CollectionView DataSource & Delegate

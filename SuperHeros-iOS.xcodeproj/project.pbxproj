@@ -22,6 +22,9 @@
 		6CAC6A7D2BC9188F00A3FF72 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC6A7B2BC9188F00A3FF72 /* DetailViewController.xib */; };
 		6CAC6A802BC91A4F00A3FF72 /* SuperheroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAC6A7E2BC91A4F00A3FF72 /* SuperheroViewCell.swift */; };
 		6CAC6A812BC91A4F00A3FF72 /* SuperheroViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC6A7F2BC91A4F00A3FF72 /* SuperheroViewCell.xib */; };
+		6CAD1CD82BCE912F009CC3FB /* PLANK___.INF in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD1CD32BCE912F009CC3FB /* PLANK___.INF */; };
+		6CAD1CD92BCE912F009CC3FB /* PlanetKosmos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD1CD42BCE912F009CC3FB /* PlanetKosmos.ttf */; };
+		6CAD1CDA2BCE912F009CC3FB /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD1CD52BCE912F009CC3FB /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		6CAC6A7B2BC9188F00A3FF72 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		6CAC6A7E2BC91A4F00A3FF72 /* SuperheroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewCell.swift; sourceTree = "<group>"; };
 		6CAC6A7F2BC91A4F00A3FF72 /* SuperheroViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroViewCell.xib; sourceTree = "<group>"; };
+		6CAD1CD32BCE912F009CC3FB /* PLANK___.INF */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "PLANK___.INF"; sourceTree = "<group>"; };
+		6CAD1CD42BCE912F009CC3FB /* PlanetKosmos.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlanetKosmos.ttf; sourceTree = "<group>"; };
+		6CAD1CD52BCE912F009CC3FB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				6CAC6A622BC916CA00A3FF72 /* Assets.xcassets */,
 				6CAC6A642BC916CA00A3FF72 /* LaunchScreen.storyboard */,
 				6CAC6A672BC916CA00A3FF72 /* Info.plist */,
+				6CAD1CD72BCE912F009CC3FB /* Fonts */,
 			);
 			path = "SuperHeros-iOS";
 			sourceTree = "<group>";
@@ -132,6 +139,24 @@
 				6C980C9D2BC9514E00EA38EE /* UIImageViewExtension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6CAD1CD62BCE912F009CC3FB /* planet-kosmos */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD1CD32BCE912F009CC3FB /* PLANK___.INF */,
+				6CAD1CD42BCE912F009CC3FB /* PlanetKosmos.ttf */,
+				6CAD1CD52BCE912F009CC3FB /* readme.txt */,
+			);
+			path = "planet-kosmos";
+			sourceTree = "<group>";
+		};
+		6CAD1CD72BCE912F009CC3FB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD1CD62BCE912F009CC3FB /* planet-kosmos */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CAC6A632BC916CA00A3FF72 /* Assets.xcassets in Resources */,
+				6CAD1CD82BCE912F009CC3FB /* PLANK___.INF in Resources */,
 				6CAC6A662BC916CA00A3FF72 /* Base in Resources */,
+				6CAD1CD92BCE912F009CC3FB /* PlanetKosmos.ttf in Resources */,
 				6CAC6A7D2BC9188F00A3FF72 /* DetailViewController.xib in Resources */,
 				6CAC6A792BC9187A00A3FF72 /* ListViewController.xib in Resources */,
+				6CAD1CDA2BCE912F009CC3FB /* readme.txt in Resources */,
 				6CAC6A812BC91A4F00A3FF72 /* SuperheroViewCell.xib in Resources */,
 				6CAC6A612BC916CA00A3FF72 /* Base in Resources */,
 			);
