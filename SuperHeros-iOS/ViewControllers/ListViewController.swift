@@ -31,6 +31,7 @@ class ListViewController:   UIViewController,
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Superheroes"
         collectionView.register(SuperheroViewCell.getNib(), forCellWithReuseIdentifier: "cell")
+        configureRefreshControl ()
         
         SuperheroProvider.searchByName(query: "a", completionHandler: { [weak self] results in
             self?.superheroInitialList = results
@@ -45,6 +46,8 @@ class ListViewController:   UIViewController,
         search.searchBar.delegate = self
         self.navigationItem.searchController = search
     }
+    
+    // MARK: SearchBar delegate
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         SuperheroProvider.searchByName(query: searchBar.text!, completionHandler: { [weak self] results in
@@ -121,6 +124,26 @@ class ListViewController:   UIViewController,
         let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
         detailViewController.superhero = superheroList[indexPath.row]
         self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    // MARK: Pull to refresh
+    
+    func configureRefreshControl () {
+       // Add the refresh control to your UIScrollView object.
+        collectionView.refreshControl = UIRefreshControl()
+        collectionView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
+    }
+        
+    @objc func handleRefreshControl() {
+       // Update your content…
+        SuperheroProvider.searchByName(query: "a", completionHandler: { [weak self] results in
+            self?.superheroList = results
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+                // Dismiss the refresh control.
+                self?.collectionView.refreshControl?.endRefreshing()
+            }
+        })
     }
 
 
