@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
         cardView.layer.cornerRadius = 16;
         cardView.layer.masksToBounds = false;
         cardView.layer.shadowColor = UIColor.black.cgColor
-        cardView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        cardView.layer.shadowOffset = CGSize(width: 8, height: 8)
         cardView.layer.shadowOpacity = 0.5
         
         nameLabel.layer.cornerRadius = 8;
