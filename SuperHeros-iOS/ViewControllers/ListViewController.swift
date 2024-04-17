@@ -88,7 +88,17 @@ class ListViewController:   UIViewController,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let columns = 2
+        var columns = 2
+        // Assign number of columns depending on device
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            columns = 2
+        case .pad:
+            columns = 5
+        default:
+            columns = 2
+        }
+        
         let screenWidth = collectionView.frame.width;
         let leftSpace = screenWidth - CGFloat(columns - 1) * (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumInteritemSpacing
         let cellWidth = leftSpace / CGFloat(columns);

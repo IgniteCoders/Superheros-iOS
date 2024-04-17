@@ -37,10 +37,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="GBo-GQ-30L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Ba6-CL-Se5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GBo-GQ-30L" secondAttribute="trailing" constant="10" id="Oje-DU-Wyi"/>
-                <constraint firstItem="GBo-GQ-30L" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="s60-lg-Jer"/>
-                <constraint firstItem="GBo-GQ-30L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wyO-KX-yxJ"/>
+                <constraint firstItem="GBo-GQ-30L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="3qf-Gx-JJL"/>
+                <constraint firstItem="GBo-GQ-30L" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ENM-zl-tM4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GBo-GQ-30L" secondAttribute="trailing" constant="10" id="FzF-g7-dYk"/>
+                <constraint firstItem="GBo-GQ-30L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dgs-ke-Tmg"/>
             </constraints>
             <point key="canvasLocation" x="9.9236641221374047" y="19.718309859154932"/>
         </view>
